@@ -26,7 +26,18 @@ public class PostService {
         return postRepository.findById(id).orElse(null);
     }
 
-    public void deletePostById(Long id){
+    public Post deletePostById(Long id){
         postRepository.deleteById(id);
+        return null;
+    }
+
+    public Post updatePost(Post updatedPost, Long id){
+        Post post = postRepository.findById(id).orElse(null);
+        if(post != null){
+            post.setTitle(updatedPost.getTitle());
+            post.setContent(updatedPost.getContent());
+            return postRepository.save(post);
+        }
+        return null;
     }
 }
