@@ -1,4 +1,4 @@
-package com.blog.repository;
+package com.example.blogmanagementsystem.repository;
 
 import com.example.blogmanagementsystem.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
