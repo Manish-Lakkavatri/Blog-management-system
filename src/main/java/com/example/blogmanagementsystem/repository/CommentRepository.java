@@ -1,0 +1,7 @@
+package com.example.blogmanagementsystem.repository;
+
+import com.example.blogmanagementsystem.entity.Comment;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CommentRepository extends JpaRepository<Comment,Long> {
+}
